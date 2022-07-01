@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>This is the test</title>
-	</head>
-	<body>
-		This is the actual test
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <button type="button" onclick="display()">Display Object Properties</button>
+        <script>
+        function display() {
+            let processor1 = {
+                brand: "Intel",
+                model: "i3",
+                name: "6100",
+                generation: 6,
+                overclocking: false
+            }
+            let processor2 = {
+                brand: "AMD",
+                model: "R5",
+                name: "3600",
+                generation: 3,
+                overclocking: true
+            }
+            document.write("The details of first object are: <br />");
+            document.write("brand: " + processor1.brand + "<br />");
+			document.write("model: " + processor1.model + "<br />");
+			document.write("name: " + processor1.name + "<br />");
+			document.write("generation: " + processor1.generation + "<br />");
+			document.write("overclocking: " + processor1.overclocking + "<br />");
+            document.write("<br />The details of second object are: <br />");
+            for(let property in processor2) {
+                document.write(property + ": " + processor2[property] + "<br />");
+            }
+        }
+        </script>
+    </body>
 </html>
